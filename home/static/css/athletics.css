@@ -1,0 +1,301 @@
+
+{% load staticfiles %}
+
+/* game cover */
+@media (min-width: 992px){
+    .game-header{
+        text-align: center;
+        margin-top: 97px;
+        color: whitesmoke;
+    }
+
+
+    .container-fluid>.row>.col-xs-6>.h2 h2{
+        font-family: "Stencil";
+    }
+
+    .game-cover>.container-fluid>.row>.col-md-6{
+        background-color: rgba(0, 0, 0, 0.4);
+       /* height: auto;*/
+
+    }.game-bg{
+        max-width: 100%;
+        max-height: 100%;
+        display:block;
+        height: auto;
+        background-size: cover;
+    }
+    #details{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: whitesmoke;
+    }
+    #maincombine{
+        position: relative;
+    }
+
+    .game-details{
+        font-family: "Roboto",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+      /*  line-height: 1.5; */
+        color: #6f6f6f;
+        padding: 30px;
+        padding-top: 5px;
+        color: whitesmoke;
+    }
+    #post-holder{
+            padding-bottom: 20px;
+    }
+
+
+
+}
+
+@media (min-width: 1200px){
+    .game-header{
+        text-align: center;
+        margin-top: 97px;
+        color: whitesmoke;
+    }
+
+
+    .container-fluid>.row>.col-xs-6>.h2 h2{
+        font-family: "Stencil";
+    }
+
+    .game-cover>.container-fluid>.row>.col-md-6{
+        background-color: rgba(0, 0, 0, 0.4);
+       /* height: auto;*/
+
+    }.game-bg{
+        max-width: 100%;
+        max-height: 100%;
+        display:block;
+        height: auto;
+        background-size: cover;
+    }
+    #details{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: whitesmoke;
+    }
+    #maincombine{
+        position: relative;
+    }
+
+    .game-details{
+        font-family: "Roboto",Helvetica,Arial,sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #6f6f6f;
+        padding: 30px;
+        padding-top: 5px;
+        color: whitesmoke;
+    }
+    #post-holder{
+            padding-bottom: 20px;
+    }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+    .game-header {
+        text-align: center;
+    }
+
+   .game-details{padding: 20px;
+    font-family: fantasy;
+    letter-spacing: 1.5px;
+    color: #0f0f0f;}
+
+
+
+    .competitions-header{
+        text-align: center;
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+    color: #0f0f0f}
+}
+
+
+/* competitions */
+
+.competitions-header{text-align: center;}
+
+.competitions{
+	padding-top: 35px;
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
+.competitions>.row{
+	padding-top: 50px;
+	padding-bottom:  50px;
+
+}
+.competitions{
+	padding-top: 40px;
+
+}
+.competitions>.row>.col-xs-4{
+	text-align: center;
+	font-weight: bold;
+}
+.competitions>.row>.col-xs-4>.img-responsive{
+	display: inline-block;
+}
+
+.competitions>.row {
+     margin-right: 0px;
+     margin-left: 0px;
+}
+
+
+/* events */
+.events{
+	text-align: center;
+}
+
+.events>.row{
+	padding-top: 50px;
+}
+
+.style-list-item{
+	background-color: #96cb41;
+
+font-size: 20px;
+}
+
+#span{
+	position: relative;
+
+}
+.events{
+
+	padding: 50px;
+}
+
+
+/* posts */
+
+.post-holders>.row>.col-xs-4{
+	text-align: center;
+}
+.events-header,.contacts-header,.sports-header{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+/* events-athelete */
+.hvr-bounce-to-right {
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #96cb41;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+/*
+#body{
+  background: url("grass.jpg");
+}
+
+.contacts>.container{
+  background: url("grass.jpg");
+}
+*/
+
+
+.hvr-bounce-to-left {
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #96cb41;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-left:hover, .hvr-bounce-to-left:focus, .hvr-bounce-to-left:active {
+  color: white;
+}
+.hvr-bounce-to-left:hover:before, .hvr-bounce-to-left:focus:before, .hvr-bounce-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+#details, #post-holder, #events, #competitions{
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
+

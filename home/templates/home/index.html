@@ -1,0 +1,173 @@
+
+{% extends 'home/base.html' %}
+
+{% block title %} GASC-IIT BHU {% endblock %}
+{% block extrafiles %}
+    <link rel="stylesheet" type="text/css" href="../../static/engine1/style.css" />
+   <!-- <script type="text/javascript" src="../../static/js/jquery.js"></script> -->
+{% endblock %}
+
+{% block navItem %} <li><a class="page-scroll" href="#events">Events|</a></li> {% endblock %}
+
+{% block content %}
+
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="../../static/data1/images/a10065.jpg" alt="" title="" id="wows1_0"/></li>
+	</ul></div>
+<div class="ws_script" style="position:absolute;left:-99%"><a href="#"></a></div>
+<div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="../../static/engine1/wowslider.js"></script>
+<script type="text/javascript" src="../../static/engine1/script.js"></script>
+
+
+
+	<div class="content" id="about">
+		<div class="container" >
+			<div class="intro-content">
+				<div class="intro-header" >
+					<h2 class="text-uppercase">About</h2>
+					<hr class="divider">
+				</div>
+				<p>
+					The Sports & Games Council of the IIT (BHU) Gymkhana offers all its future IIT’ians inclined the chance to explore the world that lay outside books. Featuring over a wide range of games and sports, students can play the sport of their choice. The council is the abode of a vibrant community of  passionate sportspersons among whom many have won recognition at the national level. With our fully equipped courts and experienced coaches even a beginner can gain expertise in a sport of their choice. Regular practice and various events are the secret behind our achievements. Teams from the council have won laurels in the inter-IIT meets, and the council’s annual sports fest SPARDHA is the largest in North India. Beyond just sports, the council is instrumental in instilling discipline and sportsmanship in the students.
+				</p>
+
+			</div>
+		</div>
+	</div>
+<div class="clearfix"></div>
+
+	<div class="sports" id="sports">
+
+            <div class="sports-header" align="center">
+                <h2 class="text-uppercase">Sports</h2>
+                <hr class="divider">
+            </div>
+            <div class="row">
+            <div class="container">
+                 {% if all_games %}
+                        {% for games in all_games %}
+                            <div class="col-sm-2 col-xs-4 " id="game-icons">
+                                <a href="/home/{{ games.page_name }}/" ><img class="img-responsive img-circle" src="{{ games.game_icon.url }}" alt=""></a>
+                            </div>
+                        {% endfor %}
+                 {% else %}
+                     <h3 align="center"> Games will be uploaded soon.</h3>
+                 {% endif %}
+            </div>
+        </div>
+	</div>
+<div class="clearfix"></div>
+	<div class="events" id="events">
+		<div class="container">
+			<div class="events-header">
+				<h2 class="text-uppercase">Events</h2>
+				<hr class="divider">
+			</div>
+			<!-- large devices -->
+			<div class="events-content hidden-xs">
+				<div class="row">
+					<div class="col-xs-6" align="left">
+						<img class="img-responsive" src="../../static/img/events/Girls-Weekend.png" alt="">
+						<h4> Girls Weekend</h4>
+					</div>
+					<div class="col-xs-6" align="right">
+						<img class="img-responsive" src="../../static/img/events/Intra-Fresher.png" alt="">
+						<h4>Intra Freshers</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/spardha.png" alt="">
+						<h3 >Spardha</h3>
+						<h6>The anual sports fest</h6>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-xs-6" align="left">
+						<img class="img-responsive" src="../../static/img/events/Intra-Hostel.png" alt="">
+						<h4 >Intra Hostel</h4>
+					</div>
+					<div class="col-xs-6" align="right">
+						<img class="img-responsive" src="../../static/img/events/Inter-IIT.png" alt="">
+						<h4 >Inter IIT</h4>
+					</div>
+				</div>
+			</div>
+			<!-- xs devices -->
+			<div class="events-content visible-xs">
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/Girls-Weekend.png" alt="">
+                        <h4> Girls Weekend</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/Intra-Fresher.png" alt="">
+						<h4>Intra Freshers</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/spardha.png" alt="">
+						<h3 >Spardha</h3>
+						<h6>The anual sports fest</h6>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/Intra-Hostel.png" alt="">
+						<h4 >Intra Hostel</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12" align="center">
+						<img class="img-responsive" src="../../static/img/events/Inter-IIT.png" alt="" >
+						<h4 >Inter IIT</h4>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+<div class="clearfix"></div>
+    <div class="contacts" id="post-holder">
+
+            <div class="contacts-header" align="center">
+                <h2 class="text-uppercase"> post holders  </h2>
+                <hr class="divider">
+            </div>
+            <div class="row ">
+            <div class="container">
+                {% if main_posts %}
+                    {% for post in main_posts %}
+                        <div class=" col-sm-3 col-xs-12" align="center">
+                            <div class="contact-card-1">
+                                <div class="contact-card">
+                                    <div class="circle-avatar" style="background-image:url({{ post.pH_photo.url }})"></div>
+                                    <h3><strong>{{ post.pH_name }}</strong></h3>
+                                    <strong>{{ post.post }}</strong>
+                                    <h5><strong>{{ post.pH_contact }}</strong></h5>
+                                    <h5><strong>{{ post.pH_email }}</strong></h5>
+                                   <!-- <div class="social-media">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h2> post will be uploaded soon</h2>
+                {% endif %}
+             </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends 'home/base.html' %}
+{% block styleFile %} {% load staticfiles %}  <link rel="stylesheet" href="/static/css/athletics.css"> {% endblock %}
+{% block title %}{{ game.game_title }}-GASC-IIT BHU{% endblock %}
+{% block stylecode %}
+ <style>
+    .game-cover>.container-fluid>.row{
+	margin-top: 80px;
+    background-size: cover;
+	background-position-y: -90px;
+    /*height: 555px;*/
+	background: url({{ game.game_cover.url }}) no-repeat;}
+ </style>
+{% endblock %}
+{% block content %}
+<script type="text/javascript" src="../../static/engine1/wowslider.js"></script>
+<div class="row" id="maincombine">
+
+        <div class="col-md-12" id="maincover">
+            <img class="img-responsive cover" src="{{ game.game_cover.url }}" />
+        </div>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-12" id="details">
+            <div class="game-header">
+                <h2 class="text-uppercase text-center"> {{ game.game_title }}  </h2>
+                <hr class="divider">
+            </div>
+            <div class="game-details">
+                <p class="text-justify">{{ game.game_intro }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="competitions" id="competitions">
+        <div class="competitions-header">
+            <h2 class="text-uppercase"> competitions  </h2>
+            <hr class="divider">
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">INTRA FRESHERS ATHLETICS MEET</span>
+            </div>
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">SPARDHA</span>
+            </div>
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">MARATHON ON NATIONAL SPORTS DAY</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">INTER IIT SPORTS MEET</span>
+            </div>
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">CYCLE RACE</span>
+            </div>
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">ANNUAL ATHLETICS MEET</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="events" id="events">
+        <div class="events-header">
+            <h2 class="text-uppercase"> Events </h2>
+            <hr class="divider">
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <ul class="list-group">
+                    <li class="list-group-item r"><span>Hammer throw </span></li>
+                    <li class="list-group-item r"><span>Javelin throw</span></li>
+                    <li class="list-group-item r"><span>Discus throw </span></li>
+                    <li class="list-group-item r"><span>100m hurdles </span></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="list-group">
+                    <li class="list-group-item r"><span>100m</span></li>
+                    <li class="list-group-item r"><span>200m</span></li>
+                    <li class="list-group-item r"><span>400m</span></li>
+                    <li class="list-group-item r"><span>400m hurdles</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="list-group">
+                    <li class="list-group-item l"><span>800m</span></li>
+                    <li class="list-group-item l"><span>1500m</span></li>
+                    <li class="list-group-item l"><span>5000m</span></li>
+                    <li class="list-group-item l"><span>4x100m; 4x400m relay</span></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="list-group">
+                    <li class="list-group-item l"><span>Shot put</span></li>
+                    <li class="list-group-item l"><span>Long Jump</span></li>
+                    <li class="list-group-item l"><span>High Jump</span></li>
+                    <li class="list-group-item l"><span>Triple Jump</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<div class="contacts" id="post-holder">
+        <div class="container">
+            <div class="contacts-header" align="center">
+                <h2 class="text-uppercase"> post holders  </h2>
+                <hr class="divider">
+            </div>
+            <div class="row ">
+                {% if all_posts %}
+                    {% for post in all_posts %}
+                        <div class=" col-sm-3 col-xs-12 col-sm-offset-1" align="center">
+                            <div class="contact-card-1">
+                                <div class="contact-card">
+                                    <div class="circle-avatar" style="background-image:url({{ post.pH_photo.url }})"></div>
+                                    <h3><strong>{{ post.pH_name }}</strong></h3>
+                                    <strong>{{ post.post }}</strong>
+                                    <h5><strong>{{ post.pH_contact }}</strong></h5>
+                                    <h5><strong>{{ post.pH_email }}</strong></h5>
+                                    <div class="social-media">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h2> post will be uploaded soon</h2>
+                {% endif %}
+             </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".r").hover(function(){
+                 $ (this).animate({ "left": "10px" }, "slow" );
+                    $(this).addClass("hvr-bounce-to-right");
+                    $(this).css("font-weight", "bold");
+                 }, function(){
+                    $(this).animate({ "left": "0px" }, "slow" );
+                    $(this).css("font-weight", "normal");
+            });
+
+
+            $(".l").hover(function(){
+                 $ (this).animate({ "right": "10px" }, "slow" );
+                    $(this).addClass("hvr-bounce-to-left");
+                    $(this).css("font-weight", "bold");
+                 }, function(){
+                    $(this).animate({ "right": "0px" }, "slow" );
+                    $(this).css("font-weight", "normal");
+
+            });
+        });
+    </script>
+
+{% endblock %}

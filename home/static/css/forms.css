@@ -1,0 +1,26 @@
+.form-area{
+
+  border: 1px solid #f1f1f1;
+  padding: 50px;
+  position: relative;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+  padding: 15px;
+  vertical-align: middle;
+  letter-spacing: .5px;
+  margin-top: 2%;
+    height: 610px;
+padding-top: 25px;
+}
+
+
+  html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+        .form-head{
+            text-align: center;
+        }
+        html {
+            background-color: #fcfcfc;
+        }

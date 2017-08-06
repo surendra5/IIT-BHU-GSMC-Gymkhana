@@ -1,0 +1,117 @@
+{% extends 'home/base.html' %}
+{% block extrafiles %} <script type="text/javascript" src="../../static/js/scro.js"></script> {% endblock %}
+{% block styleFile %} {% load staticfiles %}  <link rel="stylesheet" href="/static/css/try.css"> {% endblock %}
+{% block title %}{{ game.game_title }}-GASC-IIT BHU{% endblock %}
+{% block navItem %} <li><a class="page-scroll" href="#competitions">Competitions|</a></li> {% endblock %}
+{% block content %}
+<script type="text/javascript" src="../../static/engine1/wowslider.js"></script>
+
+<div class="row" id="maincombine">
+
+        <div class="col-md-12" id="maincover">
+            <img class="img-responsive cover" src="{{ game.game_cover.url }}" />
+        </div>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-6" id="details">
+            <div class="game-header">
+                <h2 class="text-uppercase" > {{ game.game_title }}  </h2>
+                <hr class="divider">
+            </div>
+            <div class="game-details">
+                <p class="text-justify" >{{ game.game_intro }}</p>
+            </div>
+        </div>
+    </div>
+
+
+<div class="clearfix"></div>
+
+<div class="competitions" id="competitions">
+        <div class="competitions-header">
+            <div class="hidden-lg hidden-md">
+                <h2 class="text-uppercase" id="mobile-competitions-title"> competitions  </h2>
+                <hr class="divider">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">Inter hostel </span>
+            </div>
+            <div class="col-xs-4 hidden-sm hidden-xs">
+                <h2 class="text-uppercase"> competitions  </h2>
+                <hr class="divider">
+            </div>
+            <div class="col-xs-4 hidden-md hidden-lg">
+
+            </div>
+            <div class="col-xs-4 ">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span class="text-uppercase">Inter year </span>
+            </div>
+        </div>
+    <div class="row hidden-md hidden-lg">
+        <div class="col-xs-4 col-xs-offset-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                SPARDHA
+            </div>
+    </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                INTER IIT SPORTS MEET
+            </div>
+            <div class="col-xs-4 hidden-md hidden-lg">
+
+            </div>
+            <div class="col-xs-4 hidden-sm hidden-xs">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                SPARDHA
+            </div>
+            <div class="col-xs-4">
+                <img class="img-responsive img-circle" src="/static/img/trophy.png" alt=""></br>
+                <span >INTRA FRESHERS  MEET</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+	<div class="contacts" id="post-holder">
+
+        <div class="container">
+            <div class="contacts-header" align="center">
+                <h2 class="text-uppercase"> post holders  </h2>
+                <hr class="divider">
+            </div>
+            <div class="row ">
+                {% if all_posts %}
+                    {% for post in all_posts %}
+                        <div class=" col-sm-3 col-xs-12 col-sm-offset-1" align="center">
+                            <div class="contact-card-1">
+                                <div class="contact-card">
+                                    <div class="circle-avatar" style="background-image:url({{ post.pH_photo.url }})"></div>
+                                    <h3><strong>{{ post.pH_name }}</strong></h3>
+                                    <strong>{{ post.post }}</strong>
+                                    <h5><strong>{{ post.pH_contact }}</strong></h5>
+                                    <h5><strong>{{ post.pH_email }}</strong></h5>
+                                    <div class="social-media">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h2> post will be uploaded soon</h2>
+                {% endif %}
+             </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+{% endblock %}

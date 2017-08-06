@@ -1,0 +1,75 @@
+
+
+
+.content>.container{
+/*border: 1px red ;*/
+margin-top: 60px;
+margin-bottom: 60px;
+text-align: justify;
+font-family: fantasy;
+font-size: 20px;
+font-weight: 5px;
+
+}
+
+.intro-header{
+	position: center;
+	text-align: center;
+	font-weight: bold;
+}
+
+.sports{/* border: 1px; */position: center;/* background: grey; */}
+
+.sports>.row{margin-top: 20px;margin-bottom: 20px;background-image: url("/static/img/backgrounds/layer42.png");/* margin-top: 8px; */padding-top: 26px;padding-bottom: 26px;}
+
+.sports>.row{
+	padding-top: 10px;
+}
+
+.events-header,.contacts-header,.sports-header{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 4px;
+}
+/*
+{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.events{
+
+	border: 1px solid red;
+	height: 589px;
+}
+
+.contacts{
+
+	border: 1px solid red;
+	height: 589px;
+}
+
+*/
+
+/*
+.sports-item{
+
+
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    
+}
+*/
+
+/*  events images */
+
+
+#game-icons{
+	    padding-bottom: 15px;
+}
+

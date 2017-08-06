@@ -1,0 +1,43 @@
+{% load staticfiles %}
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% include 'material/includes/material_css.html' %}
+        <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+        {% include 'material/includes/material_js.html' %}
+        <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+
+
+{% load material_form %}
+      <div class="container">
+      <div class="row">
+    <div class="col s6 offset-s3 form-area">
+    <div class="form-head"><h4>Participate</h4></div>
+    <form method="POST">
+        {% csrf_token %}
+
+
+
+        {% form form=form %}{% endform %}
+        <button type="submit" name="_submit" class="btn">Submit</button>
+    </form>
+
+    </div>
+
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    </body>
+  </html>
+

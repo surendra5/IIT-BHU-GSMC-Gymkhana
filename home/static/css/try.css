@@ -1,0 +1,109 @@
+{% load staticfiles %}
+
+/* game cover */
+
+@media (max-width: 992px) {
+    .game-header {
+        text-align: center;
+
+    }
+
+    .game-details{padding: 20px;
+    font-family: fantasy;
+    letter-spacing: 1.5px;
+    color: #0f0f0f;}
+
+    .competitions-header{
+        text-align: center;
+    font-family: fantasy;
+    letter-spacing: 0.5px;}
+}
+@media (min-width: 992px){
+    .game-header{
+        text-align: center;
+        margin-top: 130px;
+        color: whitesmoke;
+    }
+
+
+    .container-fluid>.row>.col-xs-6>.h2 h2{
+        font-family: "Stencil";
+    }
+
+    .game-cover>.container-fluid>.row>.col-md-6{
+        background-color: rgba(0, 0, 0, 0.4);
+       /* height: auto;*/
+
+    }.game-bg{
+        max-width: 100%;
+        max-height: 100%;
+        display:block;
+        height: auto;
+        background-size: cover;
+    }
+    #details{
+        width: 50%;
+        height: 640px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: whitesmoke;
+    }
+    #maincombine{
+        position: relative;
+    }
+
+    .game-details{
+        font-family: "Roboto",Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #6f6f6f;
+        padding: 30px;
+        padding-top: 10px;
+        color: whitesmoke;
+
+    }
+
+    #post-holder{
+            padding-bottom: 20px;
+    }
+
+}
+
+
+/* competitions */
+
+.competitions{
+	padding-top: 35px;
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
+.competitions>.row{
+	padding-top: 50px;
+	padding-bottom:  50px;
+
+}
+.competitions{
+	padding-top: 40px;
+
+}
+.competitions>.row>.col-xs-4{
+	text-align: center;
+	font-weight: bold;
+}
+.competitions>.row>.col-xs-4>.img-responsive{
+	display: inline-block;
+}
+
+.competitions>.row {
+     margin-right: 0px;
+     margin-left: 0px;
+}
+
+
+
+#post-holder, #details, #competitions{
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+}
