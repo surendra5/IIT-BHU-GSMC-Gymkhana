@@ -1,4 +1,4 @@
-# gymkhana
+# IIT BHU Games and Sports Council, Gymkhana 2017
 under development;
 Todo :
 backgrounds,
