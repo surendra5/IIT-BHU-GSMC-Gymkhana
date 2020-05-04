@@ -10,5 +10,4 @@ logos and home page design,
 [localhost//]/eventform ,
 [localhost//]/admin ,
 [localhost//]/login ,
-[localhost//]/signup ,
-# gymkhana2
+[localhost//]/signup 
